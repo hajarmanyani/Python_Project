@@ -3,8 +3,9 @@
 {% block head %}Books{% endblock%}
 {% block titre %}ALL Books{% endblock %}
 {% block search %} 
+
 <form >
-  
+  {% csrf_token %}
   <div class="search-box">
     <input type="text"  placeholder="Search..." name="Search">
     <a ><button name="" class='bx bx-search' ></button> </a>
