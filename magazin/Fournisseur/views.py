@@ -15,8 +15,18 @@ def all_fourn(request):
             else:
                   fourn_data=Fourn.objects.filter(Nom =Search)
 
+<<<<<<< HEAD
       countdt = Fourn.objects.count()
       return render(request,"Fournisseur/fournisseurs.html",{'fourn_data':fourn_data,'countdt': countdt})
+=======
+<<<<<<< HEAD
+      countfr = Fourn.objects.count()
+      return render(request,"Fournisseur/fournisseurs.html",{'fourn_data':fourn_data,'countfr': countfr})
+=======
+      countdt = Fourn.objects.count()
+      return render(request,"Fournisseur/fournisseurs.html",{'fourn_data':fourn_data,'countdt': countdt})
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
+>>>>>>> tempbranch
 
 def add_fourn(request):
       form=FournForm
@@ -30,7 +40,15 @@ def add_fourn(request):
 
 def update_fourn(request,Id):
       fourn_data=Fourn.objects.get(Id=Id)
+<<<<<<< HEAD
       form=FournForm(instance=Fourn_data)
+=======
+<<<<<<< HEAD
+      form=FournForm(instance=fourn_data)
+=======
+      form=FournForm(instance=Fourn_data)
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
+>>>>>>> tempbranch
       if request.method == 'POST':
             form=FournForm(request.POST,instance=fourn_data)
             if form.is_valid():

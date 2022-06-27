@@ -1,4 +1,17 @@
 {% extends "base.html" %}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+{% block title %}Modifier Fournisseur{% endblock %}
+{% block titre %}Modifier Fournisseur{% endblock %}
+{% block head %}Modifier Fournisseur{% endblock%}
+{% load crispy_forms_tags %} 
+{% block content %} 
+<div  style="margin-left: 29%;margin-top: 3%;background-color: white;width: 600px;padding: 60px;border-radius: 30px;">
+  <h4 style="padding-bottom: 20px;text-align: center;margin-top: -8%;"> Update Fournisseurs :</h4>
+      <form method="post">
+=======
+>>>>>>> tempbranch
 {% block title %}Modifier un Fournisseur{% endblock %}
 {% block titre %}Modifier un Fournisseur{% endblock %}
 {% block head %}Modifier Fournisseur{% endblock%}
@@ -6,6 +19,10 @@
 {% block content %} 
 <div  style="width: 500px;margin-left: 31%;">
     <form method="post">
+<<<<<<< HEAD
+=======
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
+>>>>>>> tempbranch
 		{% csrf_token %}
 		{{ form|crispy }}
         <br>

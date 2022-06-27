@@ -30,10 +30,28 @@
 <td>{{fr.Adresse}}</td>
 <td>{{fr.Cin}}</td>
 <td>{{fr.Email}}</td>
+<<<<<<< HEAD
 <td ><a href="{% url 'update_fourn' fr.Id %}" class="btn btn-outline-success" >Modifier</a> 
+=======
+<<<<<<< HEAD
+<td ><a href="{% url 'update_fournisseur' fr.Id %}" class="btn btn-outline-success" >Modifier</a> 
+=======
+<td ><a href="{% url 'update_fourn' fr.Id %}" class="btn btn-outline-success" >Modifier</a> 
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
+>>>>>>> tempbranch
 <a href="delete_fourn/{{fr.Id}}" class="btn btn-outline-danger" onclick="return confirm('vous voulez vraiment supprimer ce fournisseur?');"> Supprimer</a> 
 </td>
   
   </tr>{% endfor %}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  {% else %}
+<tr>
+  <td>Ce Livre N'existe pas</td>
+</tr>
+=======
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
+>>>>>>> tempbranch
 {% endif %}{% endblock %}
   
