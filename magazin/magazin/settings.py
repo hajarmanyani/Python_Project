@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure--3-l3va4p2601#xf-#=w8yr_@e47zrppe530k!m4t#v24&!5rb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles','product','crispy_forms','session',
     'Auteur',
+    'Fournisseur','parametre'
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -120,7 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 SRARICFILES_DIRS= ['static']
 MEDIA_URL= 'images/'
-
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

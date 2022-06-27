@@ -3,8 +3,8 @@
 {% block head %}Books{% endblock%}
 {% block titre %}ALL Books{% endblock %}
 {% block search %} 
-<form >
-  
+<form method="post">
+  {% csrf_token %}
   <div class="search-box">
     <input type="text"  placeholder="Search..." name="Search">
     <a ><button name="" class='bx bx-search' ></button> </a>
@@ -33,15 +33,18 @@
 <td>{{pro.nom}}</td>
 <td>{{pro.description}}</td>
 <td>{{pro.prix}} DH</td>
-<td><img src="{{pro.image.url}}" alt="{{pro.nom|add:' image'}}" width="150px" height="150px"></td>
+<td><img src="{{pro.image.url}}" alt="" width="150px" height="150px"></td>
 <td>{{pro.ecrivain}}</td>
 <td ><a href="{% url 'update' pro.id %}" class="btn btn-outline-success" >modifier</a> 
   <a href="/delete/{{pro.id}}" class="btn btn-outline-danger" onclick="return confirm('vous voulez vraiment supprimer ce Livre?');">Supprimer</a> 
 </td>
 
-</tr>{% endfor %}
+</tr>
+{% endfor %}
 {% else %}
 <tr>
   <td>Ce Livre N'existe pas</td>
 </tr>
-</table>{% endif %}{% endblock %}
+</table>{% endif %}
+
+{% endblock %}
