@@ -40,7 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles','product','crispy_forms','session',
     'Auteur',
+<<<<<<< HEAD
     'Fournisseur','parametre'
+=======
+    'Fournisseur',
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

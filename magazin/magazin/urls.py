@@ -25,7 +25,10 @@ urlpatterns = [
     path('',include('session.urls')),
     path('',include('Auteur.urls')),
     path('',include('Fournisseur.urls')),
+<<<<<<< HEAD
     path('',include('parametre.urls')),
+=======
+>>>>>>> 8be79b34c5469a9341f0101d2a141bbadde9eb1b
 ]
 
 if settings.DEBUG:
